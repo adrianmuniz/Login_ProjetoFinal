@@ -1,5 +1,5 @@
 function criarProvedora() {
-    var url = "http://localhost:8080/provedora";
+    var url = "http://localhost:8080/novaprovedora";
 
     var provedora = {
         "nome": document.getElementById("txtNome").value,
