@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script type="text/javascript" src="./scripts/provedora.js"></script>
-    <title>Nova Provedora</title>
+    <script type="text/javascript" src="./scripts/serie.js"></script>
+    <title>Nova Serie</title>
 </head>
-<body>
+<body onload="popularComboProvedora()">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
@@ -17,32 +17,48 @@
         <br>
         <div class="row">
             <div class="col-12">
-                <h3 style="text-align: center;">NOVA PROVEDORA</h3>
+                <h3 style="text-align: center;">NOVA SERIE</h3>
             </div>
         </div>
         <br>
         <div class="input-group flex-nowrap">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">Nome</span>
+                <span class="input-group-text" id="addon-wrapping">Titulo</span>
             </div>
-            <input id="txtNome" type="text" class="form-control" placeholder="Digite o nome da provedora">
+            <input id="txtTitulo" type="text" class="form-control" placeholder="Digite o titulo da série">
         </div>
         <br>
         <div class="input-group flex-nowrap">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">Site</span>
+                <span class="input-group-text" id="addon-wrapping">Genero</span>
             </div>
-            <input id="txtSite" type="text" class="form-control" placeholder="Digite o site da provedora">
+            <input id="txtGenero" type="text" class="form-control" placeholder="Digite o genero da série">
         </div>
         <br>
         <div class="input-group flex-nowrap">
             <div class="input-group-prepend">
-                <span class="input-group-text" id="addon-wrapping">Data de Fundação</span>
+                <span class="input-group-text" id="addon-wrapping">Sinopse</span>
             </div>
-            <input id="txtDataFundacao" type="text" class="form-control" placeholder="Digite a data da fundação">
+            <input id="txtSinopse" type="text" class="form-control" placeholder="Digite a Sinopse">
+        </div>
+        <br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Lançamento</span>
+                <input id="chkLancamento" type="checkbox" class="form-check">
+            </div>
+        </div>
+        </br>
+        <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="addon-wrapping">Provedora</span>
+                <select id="ddlProvedora" class="custom-select">
+
+                </select>
+            </div>
         </div>
         <br><br>
-        <button type="button" onclick="criarProvedora()" class="btn btn-primary">Salvar</button>
+        <button type="button" onclick="criarSerie()" class="btn btn-primary">Criar Série</button>
     </div>
 </body>
 </html>
